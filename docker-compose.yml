@@ -4,9 +4,8 @@ networks:
   default:
 
 volumes:
-  portainer:
   unifi:
- netdata:
+  traefik:
 
 services:
 
