@@ -5,10 +5,10 @@ services:
   unifi:
     labels:
       traefik.enable: "true"
-      traefik.docker.network: mediaserver_default
+      traefik.docker.network: traefik-unifi_default
       traefik.http.routers.unifi.tls.certresolver: prod
       traefik.http.routers.unifi.rule: Host(`${UNIFI_HOST}`)
-      traefik.http.services.unifi.loadbalancer.server.port: 32400
+      traefik.http.services.unifi.loadbalancer.server.port: 8443
       traefik.http.services.unifi.loadbalancer.server.scheme: http
 
   # https://hub.docker.com/_/traefik/
